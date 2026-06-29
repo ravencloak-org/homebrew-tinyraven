@@ -11,7 +11,7 @@ class Tinyraven < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ravencloak-org/tiny/releases/download/v0.2.0/tinyraven_0.2.0_darwin_amd64.tar.gz"
-      sha256 "7a3bf5a5c5d00966f4dd4c5478582e5156be7b2a65aead970e626b165ec8b62a"
+      sha256 "75429f1837c730bfc1e2d58e87636483be997c5151688dde2d4e6431b79a412e"
 
       define_method(:install) do
         bin.install "tr"
@@ -19,7 +19,7 @@ class Tinyraven < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ravencloak-org/tiny/releases/download/v0.2.0/tinyraven_0.2.0_darwin_arm64.tar.gz"
-      sha256 "7b33985ef73fb6ff129a52fea1d1be8268f692ea47b6245403b9e786f29812bc"
+      sha256 "60d9eba328505522757f8dd62b42ce3998dcec83361aa3d4e9707d4d41487369"
 
       define_method(:install) do
         bin.install "tr"
@@ -30,14 +30,14 @@ class Tinyraven < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ravencloak-org/tiny/releases/download/v0.2.0/tinyraven_0.2.0_linux_amd64.tar.gz"
-      sha256 "b674bd713cc5a19fe91fc0c5099116427185664c6e24774244d88e73f5507f19"
+      sha256 "fa05b7c58b8efa15fe9ae910d93e23ced69f7a2e0044e7053bec36c345f9c95b"
       define_method(:install) do
         bin.install "tr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ravencloak-org/tiny/releases/download/v0.2.0/tinyraven_0.2.0_linux_arm64.tar.gz"
-      sha256 "8b313fa8e4ba3c836cbee971cc3aefb74303df4cdb4a97806094b611b11b1731"
+      sha256 "cea91a03f580faecca7b9aeb3675b618a85004320a2b0e33de3f9fc783a35005"
       define_method(:install) do
         bin.install "tr"
       end
