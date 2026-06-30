@@ -5,21 +5,21 @@
 class Tinyraven < Formula
   desc "Open-source, self-hosted, drop-in alternative to Tinybird (binary: tr)"
   homepage "https://github.com/ravencloak-org/tiny"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.0/tinyraven_0.3.0_darwin_amd64.tar.gz"
-      sha256 "4570378fd893dcbd14375b903392cbf7612de85759984788693a111dfe58eb4c"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.1/tinyraven_0.3.1_darwin_amd64.tar.gz"
+      sha256 "ca6f15231015f53c33a8aaa5756a24d40eafad137df89585185493a2bfdcaca7"
 
       define_method(:install) do
         bin.install "tr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.0/tinyraven_0.3.0_darwin_arm64.tar.gz"
-      sha256 "734cd5a7f2a5344dac2c184b18da8bc05be19818bb05ab75d3745243abd06589"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.1/tinyraven_0.3.1_darwin_arm64.tar.gz"
+      sha256 "39ffe4f597f146c23655af5d016f2e3c0b30363f8f25cc97eba0e09020da8b8f"
 
       define_method(:install) do
         bin.install "tr"
@@ -29,15 +29,15 @@ class Tinyraven < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.0/tinyraven_0.3.0_linux_amd64.tar.gz"
-      sha256 "86ba47d64dd3b3dee1aa51a3f76f6a320afdf09d4f1a5911286b0ec87b5506a0"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.1/tinyraven_0.3.1_linux_amd64.tar.gz"
+      sha256 "e96a6b5ed6ffacef15171d36558740e419bf8c985c7a74fe0bca4d2d78ec1ff9"
       define_method(:install) do
         bin.install "tr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.0/tinyraven_0.3.0_linux_arm64.tar.gz"
-      sha256 "10ed9fd68dd3c6354263eeb1ce4cb34dc663f194f98a7d50a347b339fcbe74fe"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.1/tinyraven_0.3.1_linux_arm64.tar.gz"
+      sha256 "1a56e2f1ffed3cb5b35ea70b952462105ad47d912c47ad811b1ccdd4d7bd1abe"
       define_method(:install) do
         bin.install "tr"
       end
