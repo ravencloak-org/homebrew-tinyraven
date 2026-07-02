@@ -5,45 +5,49 @@
 class Tinyraven < Formula
   desc "Open-source, self-hosted, drop-in alternative to Tinybird (binary: tinyraven)"
   homepage "https://github.com/ravencloak-org/tiny"
-  version "0.3.12"
+  version "0.3.13"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.12/tinyraven_0.3.12_darwin_amd64.tar.gz"
-      sha256 "27d042f612e5a36332e2bc45e7ff74d4676b86b5f254eef7386ecc900ceaa88e"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.13/tinyraven_0.3.13_darwin_amd64.tar.gz"
+      sha256 "e1aba725d8dde908fb235a919968104b5822ac23c29980d4c42305bc2039fdfd"
 
       define_method(:install) do
         bin.install "tinyraven"
         generate_completions_from_executable(bin/"tinyraven", "completion")
+        pkgshare.install "examples/tinyraven.postman_collection.json"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.12/tinyraven_0.3.12_darwin_arm64.tar.gz"
-      sha256 "5c478f7eff9ffb1d61c9aa7336dacf50d6cd9f1ef15493e5704a59067c86a187"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.13/tinyraven_0.3.13_darwin_arm64.tar.gz"
+      sha256 "bd2dcf8315651b696ca655d1170065e68df641402cbd2470ec86c665f107f8b0"
 
       define_method(:install) do
         bin.install "tinyraven"
         generate_completions_from_executable(bin/"tinyraven", "completion")
+        pkgshare.install "examples/tinyraven.postman_collection.json"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.12/tinyraven_0.3.12_linux_amd64.tar.gz"
-      sha256 "b1562b56cc2c79cbd3653c4615b0e808af730318ffcab87cccf10f2beef6de96"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.13/tinyraven_0.3.13_linux_amd64.tar.gz"
+      sha256 "9bf2c48ee7f20d8764f5de3cabbbc98d4a1b9e9c84ab35f0e2303b14b444d19e"
       define_method(:install) do
         bin.install "tinyraven"
         generate_completions_from_executable(bin/"tinyraven", "completion")
+        pkgshare.install "examples/tinyraven.postman_collection.json"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.12/tinyraven_0.3.12_linux_arm64.tar.gz"
-      sha256 "4b61ad321e3e14852ed070e442a19f9985af9ead4a202a30b765ad2aa9d71a69"
+      url "https://github.com/ravencloak-org/tiny/releases/download/v0.3.13/tinyraven_0.3.13_linux_arm64.tar.gz"
+      sha256 "6bca6044d264229630f98f95109d12e25a71d0825ecd538ff8950f8d26f43ab3"
       define_method(:install) do
         bin.install "tinyraven"
         generate_completions_from_executable(bin/"tinyraven", "completion")
+        pkgshare.install "examples/tinyraven.postman_collection.json"
       end
     end
   end
